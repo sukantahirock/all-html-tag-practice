@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatic Picture Slideshow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .slideshow-container {
+            max-width: 80%;
+            max-height: 20%;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .image-type-1 {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="https://w1.pngwing.com/pngs/77/305/png-transparent-green-grass-logo-new-zealand-green-party-of-aotearoa-new-zealand-political-party-text-line-area.png" .image-type-1>
+    </div>
+
+    <div class="mySlides">
+        <img src="https://rnz-ressh.cloudinary.com/image/upload/s--5sSsC6-u--/ar_16:10,c_fill,f_auto,g_auto,q_auto,w_1050/v1682554551/4L9W9XO_Green_Party_jpg" .image-type-1>
+    </div>
+</div>
+<br>
+<br>
+<h1 style="background-color: green;text-align: center;">NEWS</h1>
+<br>
+<img src="https://ak.picdn.net/contributors/1453682/avatars/thumb.jpg" height="120" width="180" style="float: left;">
+<div>
+   <p><u>	
+     <h3 style="color: green;size: 550;">&nbsp;Feds Should Ensure All NWT Evacuees Receive Equal Financial Assistance, Says Green Party of Canada</h3></u></p>
+</div>
+<div>
+   <p><u>	
+     <h3 style="color: green;size: 550;">&nbsp;Feds Should Ensure All NWT Evacuees Receive Equal Financial Assistance, Says Green Party of Canada</h3></u></p>
+</div>
+<div>
+   <p><u>	
+     <h3 style="color: green;size: 550;">&nbsp;Feds Should Ensure All NWT Evacuees Receive Equal Financial Assistance, Says Green Party of Canada</h3></u></p>
+</div>
+
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+
+</body>
+</html>
+
+

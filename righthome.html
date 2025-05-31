@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Person Information</title>
+<style>
+  .person-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .person-picture {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .read-more {
+    color: white;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body bgcolor="#008000">
+<div class="person-card">
+    <center>
+  <img class="person-picture" src="https://mbstu.ac.bd/assets/images/Md.%20Shahabuddin.jpeg" alt="Chancelor Picture">
+  <figcaption><font style="color: #ccc; size: 7;"><b>Chancellor</b></font></figcaption>
+</center>
+<font style="color: #ccc; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">
+  <p class="intro">Mr. Mohammed Shahabuddin</p>
+  <p class="details hidden">Hon’ble President of the People’s Republic of Bangladesh and Chancellor of MBSTU
+  </p>
+  <p class="read-more" onclick="toggleDetails(this)"><u>Read more...</u></p>
+</font>
+</div>
+
+<div class="person-card">
+    <center>
+  <img class="person-picture" src="https://mbstu.ac.bd/assets/images/forhad_vc_sir.jpg" alt="Vice-Chancelor Picture">
+  <figcaption><font style="color: #ccc; size: 7;"><b>Vice-Chancellor</b></font></figcaption>
+</center>
+<font style="color: #ccc; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">
+  <p class="intro">Professor Dr. Md. Forhad Hossain</p>
+  <p class="details hidden">Hon’ble Vice-Chancellor of MBSTU
+  </p>
+  <p class="read-more" onclick="toggleDetails(this)"><u>Read more...</u></p>
+</font>
+</div>
+
+<div class="person-card">
+    <center>
+  <img class="person-picture" src="https://mbstu.ac.bd/assets/images/arm_soaiman_vc_sir.jpg" alt="Pro Vice-Chancelor Picture">
+  <figcaption><font style="color: #ccc;size: 7;"><b>Pro Vice-Chancellor</b></font></figcaption>
+</center>
+<font style="color: #ccc; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">
+  <p class="intro">Professor Dr. A.R.M. Solaiman</p>
+  <p class="details hidden">Hon’ble Pro Vice-Chancellor of MBSTU
+  </p>
+  <p class="read-more" onclick="toggleDetails(this)"><u>Read more...</u></p>
+</font>
+</div>
+
+<script>
+  function toggleDetails(readMoreElement) {
+    const details = readMoreElement.previousElementSibling;
+    const readMore = readMoreElement;
+
+    if (details.classList.contains('hidden')) {
+      details.classList.remove('hidden');
+      readMore.textContent = "Read less";
+    } else {
+      details.classList.add('hidden');
+      readMore.textContent = "Read more...";
+    }
+  }
+</script>
+</body>
+</html>
